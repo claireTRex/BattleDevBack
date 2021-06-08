@@ -67,11 +67,13 @@ public class User {
                 String favouriteFootballTeam, boolean prefersFootballOverRugby, boolean watchesFootballOnTV,
                 boolean watchesFootballOnMobilePhone, boolean watchesFootballOnline)
     {
+//        mandatory
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
+//        optionnal
         this.nationality = nationality;
         this.zipCode = zipCode;
         this.city = city;
