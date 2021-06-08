@@ -9,8 +9,7 @@ import java.util.List;
 @Repository
 public interface UserDao extends JpaRepository<User, Integer>{
     /* CREATE AND/OR UPDATE USER */
-    User save (User user);
-
+    User save(User user);
     /* READ USER */
     List<User> findAll();
     User findById(int id);
