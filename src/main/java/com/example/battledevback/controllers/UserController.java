@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -31,14 +32,14 @@ public class UserController {
 
     /* POST */
     @PostMapping
-    public ResponseEntity<User> addUser(@RequestBody User user) {
+    public ResponseEntity<User> addUser(@RequestBody @Valid User user) {
         User newUser = userDao.save(user);
         return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
     /* PUT || PATCH */
     @PutMapping("/{id}")
-    public ResponseEntity<User> putUser(@PathVariable int id, @RequestBody User user) {
+    public ResponseEntity<User> putUser(@PathVariable int id, @RequestBody @Valid User user) {
         User userToModify = userDao.findById(id);
 
         if (userToModify == null) {

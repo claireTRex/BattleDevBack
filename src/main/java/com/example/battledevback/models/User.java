@@ -1,9 +1,8 @@
 package com.example.battledevback.models;
 
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 
 
@@ -14,52 +13,101 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private String firstName;
-    private String lastName;
+    @NotNull(message = "firstname cannot be null")
+    @NotEmpty
+    private String firstname;
+
+    @NotNull(message = "lastname cannot be null")
+    @NotEmpty
+    private String lastname;
+
+    @NotNull(message = "email must be a valid email address")
+    @NotEmpty
+    @Email
     private String email;
+
+    @NotNull(message = "Gender cannot be null")
+    @NotEmpty
     private String gender;
+
+    @NotNull(message = "DoB cannot be null")
+    @Past(message = "DoB must be in the past")
     private LocalDate dateOfBirth;
+
 //    geographic zone
     private String nationality;
+
+    @PositiveOrZero
     private int zipCode;
+
     private String city;
+
     private String street;
+
 //    fittings
     private String housing;
-    private int numberofVehicules;
+
+    @PositiveOrZero
+    private int numberOfVehicles;
+
     private String internetServiceProvider;
+
     private String mobileOperator;
+
     private boolean subscribesToSportChannels;
+
 //    family
     private String religion;
+
+    @PositiveOrZero
     private int numberOfSiblings;
+
     private String civilStatus;
+
     private String sexualOrientation;
+
+    @PositiveOrZero
     private int numberOfChildren;
+
+    @PositiveOrZero
     private int numberOfPets;
+
 //    health
     private boolean covidVaccinated;
+
     private boolean drinksAlcohol;
+
     private boolean smokesTobacco;
+
 //    hobbies
     private boolean readsSportPress;
+
     private boolean watchSportShow;
+
     private boolean doesSport;
+
     private boolean playsFootball;
+
     private boolean goesToFootballStadium;
+
     private String favouriteFootballClub;
+
     private String favouriteFootballTeam;
+
     private boolean prefersFootballOverRugby;
+
     private boolean watchesFootballOnTV;
+
     private boolean watchesFootballOnMobilePhone;
+
     private boolean watchesFootballOnline;
 
     /* CONSTRUCTORS */
     public User(){}
 
-    public User(String firstName, String lastName, String email, String gender, LocalDate dateOfBirth,
+    public User(String firstname, String lastname, String email, String gender, LocalDate dateOfBirth,
                 String nationality, int zipCode, String city, String street, String housing,
-                int numberofVehicules, String internetServiceProvider, String mobileOperator,
+                int numberOfVehicles, String internetServiceProvider, String mobileOperator,
                 boolean subscribesToSportChannels, String religion, int numberOfSiblings, String civilStatus,
                 String sexualOrientation, int numberOfChildren, int numberOfPets, boolean covidVaccinated,
                 boolean drinksAlcohol, boolean smokesTobacco, boolean readsSportPress, boolean watchSportShow,
@@ -68,8 +116,8 @@ public class User {
                 boolean watchesFootballOnMobilePhone, boolean watchesFootballOnline)
     {
 //        mandatory
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.email = email;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
@@ -79,7 +127,7 @@ public class User {
         this.city = city;
         this.street = street;
         this.housing = housing;
-        this.numberofVehicules = numberofVehicules;
+        this.numberOfVehicles = numberOfVehicles;
         this.internetServiceProvider = internetServiceProvider;
         this.mobileOperator = mobileOperator;
         this.subscribesToSportChannels = subscribesToSportChannels;
@@ -115,20 +163,20 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstName) {
+        this.firstname = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastName) {
+        this.lastname = lastName;
     }
 
     public String getEmail() {
@@ -195,12 +243,12 @@ public class User {
         this.housing = housing;
     }
 
-    public int getNumberofVehicules() {
-        return numberofVehicules;
+    public int getNumberOfVehicles() {
+        return numberOfVehicles;
     }
 
-    public void setNumberofVehicules(int numberofVehicules) {
-        this.numberofVehicules = numberofVehicules;
+    public void setNumberOfVehicles(int numberOfVehicules) {
+        this.numberOfVehicles = numberOfVehicules;
     }
 
     public String getInternetServiceProvider() {
