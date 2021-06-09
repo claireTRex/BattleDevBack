@@ -30,6 +30,15 @@ public class UserController {
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getById(@PathVariable int id) {
+        User user = userDao.findById(id);
+        if (user == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
     /* POST */
     @PostMapping
     public ResponseEntity<User> addUser(@RequestBody @Valid User user) {
