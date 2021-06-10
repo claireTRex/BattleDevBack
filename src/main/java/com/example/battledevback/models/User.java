@@ -54,7 +54,7 @@ public class User {
 
     private String mobileOperator;
 
-    private boolean subscribesToSportChannels;
+    private String subscribesToSportChannels;
 
 //    family
     private String religion;
@@ -73,34 +73,34 @@ public class User {
     private int numberOfPets;
 
 //    health
-    private boolean covidVaccinated;
+    private String covidVaccinated;
 
-    private boolean drinksAlcohol;
+    private String drinksAlcohol;
 
-    private boolean smokesTobacco;
+    private String smokesTobacco;
 
 //    hobbies
-    private boolean readsSportPress;
+    private String readsSportPress;
 
-    private boolean watchSportShow;
+    private String watchSportShow;
 
-    private boolean doesSport;
+    private String doesSport;
 
-    private boolean playsFootball;
+    private String playsFootball;
 
-    private boolean goesToFootballStadium;
+    private String goesToFootballStadium;
 
     private String favouriteFootballClub;
 
     private String favouriteFootballTeam;
 
-    private boolean prefersFootballOverRugby;
+    private String prefersFootballOverRugby;
 
-    private boolean watchesFootballOnTV;
+    private String watchesFootballOnTV;
 
-    private boolean watchesFootballOnMobilePhone;
+    private String watchesFootballOnMobilePhone;
 
-    private boolean watchesFootballOnline;
+    private String watchesFootballOnline;
 
     /* CONSTRUCTORS */
     public User(){}
@@ -108,12 +108,12 @@ public class User {
     public User(String firstname, String lastname, String email, String gender, LocalDate dateOfBirth,
                 String nationality, int zipCode, String city, String street, String housing,
                 int numberOfVehicles, String internetServiceProvider, String mobileOperator,
-                boolean subscribesToSportChannels, String religion, int numberOfSiblings, String civilStatus,
-                String sexualOrientation, int numberOfChildren, int numberOfPets, boolean covidVaccinated,
-                boolean drinksAlcohol, boolean smokesTobacco, boolean readsSportPress, boolean watchSportShow,
-                boolean doesSport, boolean playsFootball, boolean goesToFootballStadium, String favouriteFootballClub,
-                String favouriteFootballTeam, boolean prefersFootballOverRugby, boolean watchesFootballOnTV,
-                boolean watchesFootballOnMobilePhone, boolean watchesFootballOnline)
+                String subscribesToSportChannels, String religion, int numberOfSiblings, String civilStatus,
+                String sexualOrientation, int numberOfChildren, int numberOfPets, String covidVaccinated,
+                String drinksAlcohol, String smokesTobacco, String readsSportPress, String watchSportShow,
+                String doesSport, String playsFootball, String goesToFootballStadium, String favouriteFootballClub,
+                String favouriteFootballTeam, String prefersFootballOverRugby, String watchesFootballOnTV,
+                String watchesFootballOnMobilePhone, String watchesFootballOnline)
     {
 //        mandatory
         this.firstname = firstname;
@@ -267,11 +267,11 @@ public class User {
         this.mobileOperator = mobileOperator;
     }
 
-    public boolean isSubscribesToSportChannels() {
+    public String isSubscribesToSportChannels() {
         return subscribesToSportChannels;
     }
 
-    public void setSubscribesToSportChannels(boolean subscribesToSportChannels) {
+    public void setSubscribesToSportChannels(String subscribesToSportChannels) {
         this.subscribesToSportChannels = subscribesToSportChannels;
     }
 
@@ -323,67 +323,67 @@ public class User {
         this.numberOfPets = numberOfPets;
     }
 
-    public boolean isCovidVaccinated() {
+    public String isCovidVaccinated() {
         return covidVaccinated;
     }
 
-    public void setCovidVaccinated(boolean covidVaccinated) {
+    public void setCovidVaccinated(String covidVaccinated) {
         this.covidVaccinated = covidVaccinated;
     }
 
-    public boolean isDrinksAlcohol() {
+    public String isDrinksAlcohol() {
         return drinksAlcohol;
     }
 
-    public void setDrinksAlcohol(boolean drinksAlcohol) {
+    public void setDrinksAlcohol(String drinksAlcohol) {
         this.drinksAlcohol = drinksAlcohol;
     }
 
-    public boolean isSmokesTobacco() {
+    public String isSmokesTobacco() {
         return smokesTobacco;
     }
 
-    public void setSmokesTobacco(boolean smokesTobacco) {
+    public void setSmokesTobacco(String smokesTobacco) {
         this.smokesTobacco = smokesTobacco;
     }
 
-    public boolean isReadsSportPress() {
+    public String isReadsSportPress() {
         return readsSportPress;
     }
 
-    public void setReadsSportPress(boolean readsSportPress) {
+    public void setReadsSportPress(String readsSportPress) {
         this.readsSportPress = readsSportPress;
     }
 
-    public boolean isWatchSportShow() {
+    public String isWatchSportShow() {
         return watchSportShow;
     }
 
-    public void setWatchSportShow(boolean watchSportShow) {
+    public void setWatchSportShow(String watchSportShow) {
         this.watchSportShow = watchSportShow;
     }
 
-    public boolean isDoesSport() {
+    public String isDoesSport() {
         return doesSport;
     }
 
-    public void setDoesSport(boolean doesSport) {
+    public void setDoesSport(String doesSport) {
         this.doesSport = doesSport;
     }
 
-    public boolean isPlaysFootball() {
+    public String isPlaysFootball() {
         return playsFootball;
     }
 
-    public void setPlaysFootball(boolean playsFootball) {
+    public void setPlaysFootball(String playsFootball) {
         this.playsFootball = playsFootball;
     }
 
-    public boolean isGoesToFootballStadium() {
+    public String isGoesToFootballStadium() {
         return goesToFootballStadium;
     }
 
-    public void setGoesToFootballStadium(boolean goesToFootballStadium) {
+    public void setGoesToFootballStadium(String goesToFootballStadium) {
         this.goesToFootballStadium = goesToFootballStadium;
     }
 
@@ -403,35 +403,35 @@ public class User {
         this.favouriteFootballTeam = favouriteFootballTeam;
     }
 
-    public boolean isPrefersFootballOverRugby() {
+    public String isPrefersFootballOverRugby() {
         return prefersFootballOverRugby;
     }
 
-    public void setPrefersFootballOverRugby(boolean prefersFootballOverRugby) {
+    public void setPrefersFootballOverRugby(String prefersFootballOverRugby) {
         this.prefersFootballOverRugby = prefersFootballOverRugby;
     }
 
-    public boolean isWatchesFootballOnTV() {
+    public String isWatchesFootballOnTV() {
         return watchesFootballOnTV;
     }
 
-    public void setWatchesFootballOnTV(boolean watchesFootballOnTV) {
+    public void setWatchesFootballOnTV(String watchesFootballOnTV) {
         this.watchesFootballOnTV = watchesFootballOnTV;
     }
 
-    public boolean isWatchesFootballOnMobilePhone() {
+    public String isWatchesFootballOnMobilePhone() {
         return watchesFootballOnMobilePhone;
     }
 
-    public void setWatchesFootballOnMobilePhone(boolean watchesFootballOnMobilePhone) {
+    public void setWatchesFootballOnMobilePhone(String watchesFootballOnMobilePhone) {
         this.watchesFootballOnMobilePhone = watchesFootballOnMobilePhone;
     }
 
-    public boolean isWatchesFootballOnline() {
+    public String isWatchesFootballOnline() {
         return watchesFootballOnline;
     }
 
-    public void setWatchesFootballOnline(boolean watchesFootballOnline) {
+    public void setWatchesFootballOnline(String watchesFootballOnline) {
         this.watchesFootballOnline = watchesFootballOnline;
     }
 }
